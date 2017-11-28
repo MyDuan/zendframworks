@@ -1,0 +1,11 @@
+<html>
+    <h>ユーザー新規作成</h></br>
+
+    <?= $this->form($this->form->getId(), $this->form->getAttribs()) ?>
+    ユーザー名前: <?= $this->form->name ?>
+    身分：<?= $this->form->identity?>
+    性別：<?= $this->form->gender?>
+    <!--年：<?= $this->form->y?>月<?= $this->form->m?>日<?= $this->form->d?>-->
+    <?= $this->form->add?>
+    <a href="<?= $this->baseUrl() ?>/user/index/">戻る</a><br><br>
+</html>

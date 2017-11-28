@@ -1,0 +1,36 @@
+<html>
+    <h>ユーザー一覧</h></br>
+    <a href="<?= $this->baseUrl() ?>/user/add">新規作成</a>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>ユーザー名前</th>
+            <th>編集</th>
+            <th>delete</th>
+        </tr>
+        <?php foreach ($this->result as $userdata): ?>
+            <tr>
+                <td><?= $userdata->id ?></td>
+                <td><?= $userdata->name ?></td>
+                <td><a href="<?= $this->baseUrl() ?>/user/edit/uno/<?= $userdata->id ?>/">編集</a></td>
+                <td><a href="<?= $this->baseUrl() ?>/user/delete/uno/<?= $userdata->id ?>/">delete</a></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+    </br>
+    </br>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>名前</th>
+            <th>code</th>
+        </tr>
+        <?php foreach ($this->class as $classdata): ?>
+            <tr>
+                <td><?= $classdata->id ?></td>
+                <td><?= $classdata->name ?></td>
+                <td><?= $classdata->code ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</html>
